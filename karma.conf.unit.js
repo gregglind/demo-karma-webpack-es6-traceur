@@ -113,7 +113,7 @@ module.exports = function(config) {
     // coverage report.
     coverageReporter: {
       type : 'html',
-      dir : 'coverage/unit'
+      dir : 'coverage/unit',
     }
   });
 };

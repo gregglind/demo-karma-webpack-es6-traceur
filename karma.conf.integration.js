@@ -99,7 +99,7 @@ module.exports = function(config) {
     // coverage report.
     coverageReporter: {
       type : 'html',
-      dir : 'coverage/integration'
+      dir : 'coverage/integration',
     }
   });
 };
