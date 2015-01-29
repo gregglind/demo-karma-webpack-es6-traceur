@@ -1,0 +1,28 @@
+{
+  "name": "demo-karma-webpack-es6-traceur",
+  "version": "0.0.1",
+  "description": "Demo: using karma + mocha + es6 + coverage",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "istanbul-instrumenter-loader": "^0.1.2",
+    "karma": "^0.12.31",
+    "karma-coverage": "^0.2.7",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-mocha": "^0.1.10",
+    "karma-webpack": "^1.5.0",
+    "mocha-traceur": "^2.1.0",
+    "opener": "^1.4.0",
+    "traceur-loader": "^0.6.3",
+    "webpack": "^1.4.13"
+  },
+  "scripts": {
+    "test:integration": "npm run build && node_modules/karma/bin/karma start karma.conf.integration.js",
+    "test:unit": "node_modules/karma/bin/karma start karma.conf.unit.js",
+    "test": "npm run test:unit && npm run test:integration",
+    "build": "webpack",
+    "demo": "npm run build && npm test && opener app/index.html coverage/integration/*/index.html coverage/unit/*/index.html"
+  },
+  "author": "Gregg Lind <glind@mozilla.com>",
+  "license": "ISC"
+}
