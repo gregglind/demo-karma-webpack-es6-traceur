@@ -1,32 +1,40 @@
+# ES6 Code, Weback Builds, 100% Test Covereage
 
-Goals:
+## Try it!
+
+```
+npm install
+npm run demo
+```
+
+## Goals:
 
 1.  Built product is an es6 one page app.
 3.  code coverage
 4.  testing using `mocha`
 
-Conclusion:
+## Conclusion:
 
 - `webpack` is awesome.
+- `karma` is awesome.
 
 Solutions explored (Alternate Soltuions):
 
-1.  compile first (using grunt)  WORKS, but tedious.
+1.  transpile first (using grunt).
+
+    - WORKS, but tedious.
+    - very 'uncool' feeling.
+
+2.  Node only testing, mocking dom and environment using [testdom](https://github.com/asbjornenge/testdom).
+
+    - mocking all the things that `window` does is hard.  Using an actual window is much easier.
 
 
-Use
+## Problems
 
-```
-npm install
-npm run build  => build output, openable at app/index.html
-npm test --log-level debug  => tests in firefox
-```
-
-Problems
-
-- well, doesn't really give es6 as *output* anywhere
+- well, doesn't really give es6 as *output* anywhere.  Both the built product and what gets tested are _transpiled_.
 - coverage and tests are run on transpiled
-- Promises
+- Promises (unkown if it uses native)
 
 
 ### Read More
